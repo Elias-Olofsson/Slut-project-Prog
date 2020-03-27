@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hemma\\source\\repos\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {}
+    "C:\\Users\\Hemma\\Documents\\GitHub\\Slut-project-Prog\\Slutprojekt\\Slutprojekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hemma\\source\\repos\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {
+    "C:\\Users\\Hemma\\Documents\\GitHub\\Slut-project-Prog\\Slutprojekt\\Slutprojekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hemma\\source\\repos\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
+        "projectUniqueName": "C:\\Users\\Hemma\\Documents\\GitHub\\Slut-project-Prog\\Slutprojekt\\Slutprojekt.csproj",
         "projectName": "Slutprojekt",
-        "projectPath": "C:\\Users\\Hemma\\source\\repos\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
+        "projectPath": "C:\\Users\\Hemma\\Documents\\GitHub\\Slut-project-Prog\\Slutprojekt\\Slutprojekt.csproj",
         "packagesPath": "C:\\Users\\Hemma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hemma\\source\\repos\\Slutprojekt\\Slutprojekt\\obj\\",
+        "outputPath": "C:\\Users\\Hemma\\Documents\\GitHub\\Slut-project-Prog\\Slutprojekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hemma\\AppData\\Roaming\\NuGet\\NuGet.Config",
