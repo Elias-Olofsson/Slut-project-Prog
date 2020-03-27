@@ -1,0 +1,4 @@
+C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.csprojAssemblyReference.cache
+C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.csproj.CoreCompileInputs.cache
+C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.AssemblyInfoInputs.cache
+C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.AssemblyInfo.cs
