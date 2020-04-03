@@ -2,3 +2,16 @@ C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slut
 C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.csproj.CoreCompileInputs.cache
 C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.AssemblyInfoInputs.cache
 C:\Users\Hemma\source\repos\Slutprojekt\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.AssemblyInfo.cs
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\bin\Debug\netcoreapp3.1\Slutprojekt.exe
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\bin\Debug\netcoreapp3.1\Slutprojekt.deps.json
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\bin\Debug\netcoreapp3.1\Slutprojekt.runtimeconfig.json
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\bin\Debug\netcoreapp3.1\Slutprojekt.runtimeconfig.dev.json
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\bin\Debug\netcoreapp3.1\Slutprojekt.dll
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\bin\Debug\netcoreapp3.1\Slutprojekt.pdb
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.csprojAssemblyReference.cache
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.csproj.CoreCompileInputs.cache
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.AssemblyInfoInputs.cache
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.AssemblyInfo.cs
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.dll
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.pdb
+C:\Users\Hemma\Documents\GitHub\Slut-project-Prog\Slutprojekt\obj\Debug\netcoreapp3.1\Slutprojekt.genruntimeconfig.cache

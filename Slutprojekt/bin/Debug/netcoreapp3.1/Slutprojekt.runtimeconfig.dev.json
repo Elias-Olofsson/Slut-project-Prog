@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Hemma\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Hemma\\.nuget\\packages"
+    ]
+  }
+}
