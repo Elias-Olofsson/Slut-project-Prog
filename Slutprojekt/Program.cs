@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.SymbolStore;
+using System.Security.Cryptography;
 
 namespace Slutprojekt
 {
@@ -10,73 +12,132 @@ namespace Slutprojekt
             app.Start();
         }
     }
-
     class App
     {
-        private string svar;
-        public void Start()
+        public string svar = "Inte valt ännu.";
+        Formel a1 = new Formel();
+        Formel a2 = new Formel();
+        Formel a3 = new Formel();
+        Formel b1 = new Formel();
+        Formel b2 = new Formel();
+        Formel b3 = new Formel();
+        Formel c1 = new Formel();
+        Formel c2 = new Formel();
+        Formel c3 = new Formel();
+        Formel d1 = new Formel();
+        Formel d2 = new Formel();
+        Formel d3 = new Formel();
+        Formel e1 = new Formel();
+        Formel e2 = new Formel();
+        Formel e3 = new Formel(); //Dessa är kanske lite svårare och onödiga men jag motivrar det med att jag vill ha properties som jag egentligen inte behöver men det står att jag ska ha det och det ser lite mer tydligt ut att de är formler.
+        public void Start() //Denna är public men den gör så att Input som är private körs.
         {
+            a1.Namn = "a1";
+            a1.Formeln = "x*2";
+
+            a2.Namn = "a2";
+            a2.Formeln = "(x*2)+1";
+
+            a3.Namn = "a3";
+            a3.Formeln = "x+2";
+
+            b1.Namn = "b1";
+            b1.Formeln = "x*4.5";
+
+            b2.Namn = "b2";
+            b2.Formeln = "x*93.4";
+
+            b3.Namn = "b3";
+            b3.Formeln = "x*22.8";
+
+            c1.Namn = "c1";
+            c1.Formeln = "3.4";
+
+            c2.Namn = "c2";
+            c2.Formeln = "(x-1)*x";
+
+            c3.Namn = "c3";
+            c3.Formeln = "x*(-1.63)";
+
+            d1.Namn = "d1";
+            d1.Formeln = "((x-1)*(x-1)*(x-1))+x";
+
+            d2.Namn = "d2";
+            d2.Formeln = "(x*3.4)+4.3";
+
+            d3.Namn = "d3";
+            d3.Formeln = "(x-3.4)*x";
+
+            e1.Namn = "e1";
+            e1.Formeln = "((x-3.4)*(x-3.4)*(x-3.4))+(x*4.3)";
+
+            e2.Namn = "e2";
+            e2.Formeln = "(((x*4.3))-(x*3.4))-3.4";
+
+            e3.Namn = "e3";
+            e3.Formeln = "(x*999998999999999999)/(x*2)";
+
             Input();
         }
 
         private void Input()
         {
-            Console.WriteLine("Hej och välkommen till vad gör programmet med talet! \nDu får börja att välja tal och det gör du genom att skriva en bokstav mellan a och e och ett tal mellan 1 och 3. \nBokstaven är svårighetsgraden där a är lättast och siffran är vilket av talen. Skriv alltid med bara små bokstäver och gör inga mellanrum."); 
-            //Här förklaras början för användaren.
-            bool inCorrect = true;
-            while (inCorrect)
+            bool inteKorrekt = true;
+            Console.WriteLine("Hej och välkommen till Vad gör programmet med talet?! \nDu får börja att välja en formel och det gör du genom att skriva en bokstav först mellan a och e och ett tal sedan mellan 1 och 3. \nBokstaven är svårighetsgraden där a är lättast och siffran är vilket av talen. Skriv alltid med bara små bokstäver och gör inga mellanrum.\nTryck enter efter varje inmatning och kom ihåg: de högre svårighetsgraderna är riktigt irriterande.");
+                        //Här förklaras början för användaren.
+            while (inteKorrekt) //While funkar oftare än if så det är för säkerhets skull om jag skulle ändra senare.
             {
-                inCorrect = false;
+                inteKorrekt = false;
                 string upgift = Console.ReadLine();
-                switch (upgift)
+                switch (upgift) //Elias sa att det var så man gjorde det och det ser mindre ut så därför gjorde jag det.
                 {
                     case "a1":
-                        svar = "x*2";
+                        svar = a1.Formeln;
                         break;
                     case "a2":
-                        svar = "(x*2)+1";
+                        svar = a2.Formeln;
                         break;
                     case "a3":
-                        svar = "x+2";
+                        svar = a3.Formeln;
                         break;
                     case "b1":
-                        svar = "x*4.5";
+                        svar = b1.Formeln;
                         break;
                     case "b2":
-                        svar = "x*93.4";
+                        svar = b2.Formeln;
                         break;
                     case "b3":
-                        svar = "x*22.9";
+                        svar = b3.Formeln;
                         break;
                     case "c1":
-                        svar = "3.4";
+                        svar = c1.Formeln;
                         break;
                     case "c2":
-                        svar = "(x-1)*x";
+                        svar = c2.Formeln;
                         break;
                     case "c3":
-                        svar = "x*(-1.63)";
+                        svar = c3.Formeln;
                         break;
                     case "d1":
-                        svar = "((x-1)*(x-1)*(x-1))+x";
+                        svar = d1.Formeln;
                         break;
                     case "d2":
-                        svar = "(x*3.4)+4.3";
+                        svar = d2.Formeln;
                         break;
                     case "d3":
-                        svar = "(x-3.4)*x";
+                        svar = d3.Formeln;
                         break;
                     case "e1":
-                        svar = "((x-3.4)*(x-3.4)*(x-3.4))+(x*4.3)";
+                        svar = e1.Formeln;
                         break;
                     case "e2":
-                        svar = "(((x*4.3))-(x*3.4))-3.4";
+                        svar = e2.Formeln;
                         break;
                     case "e3":
-                        svar = "(x*999998999999999999)/(x*2)";
+                        svar = e3.Formeln;
                         break;
                     default:
-                        inCorrect = true;
+                        inteKorrekt = true;
                         break;
                 }
                 Console.WriteLine("Nu får du börja skriva in tal eller gissningar! \nVill du testa ett tal och se vad det blir skriver du in talet. Vill du gissa så skriver du g."); 
@@ -87,6 +148,8 @@ namespace Slutprojekt
                     string gEllerEj = Console.ReadLine();
                     if (gEllerEj == "g")
                     {
+                        Console.WriteLine("Du har valt att gissa skriv in formeln du gissar! \nOm formeln har en variabel så skriv den som x. Skriv paranteser runt varje uträkning som prioriteras före någon annan uträkning. \nBörja med x om det är ett x. Använd bara de fyra räknesätten och de måste vara utskrivna helt. \nOm det finns olika sätt att skriva formeln börja med den delen med mest paranteser om inte det är så att ett är x och ett annat inte är x. \nSvaret är så kort som det kan vara med alla dessa regler.");
+                        //Här förklaras fortsättningen för användaren.
                         if (Console.ReadLine() == svar)
                         {
                             Console.WriteLine("Du har rätt.");
@@ -99,9 +162,10 @@ namespace Slutprojekt
                     }
                     else if (gEllerEj != "g")
                     {
-                        Console.WriteLine("Du har valt att gissa skriv in formeln du gissar! \nOm formeln har en variabel så skriv den som x. Skriv paranteser runt varje uträkning som prioriteras före någon annan uträkning. \nBörja med x om det är ett x. Använd bara de fyra räknesätten och de måste vara utskrivna helt. \nOm det finns olika sätt att skriva formeln börja med den delen med mest paranteser om inte ett är x och ett annat inte. \nSvaret är så kort som det kan vara med alla dessa regler.");
-                        //Här förklaras fortsättningen för användaren.
-                        double gEllerEj2 = double.Parse(gEllerEj); //GEllerEj2 är som vanliga gEllerEj men den har blivit en double.
+                        gEllerEj = gEllerEj.Replace(".", ",");
+                        double gEllerEj2;
+                        if (!double.TryParse(gEllerEj, out gEllerEj2)) //GEllerEj2 är som vanliga gEllerEj men den har blivit en double.
+                            continue;
                         double exemplet = 1.0;
                         if(upgift == "a1")
                         {
@@ -125,7 +189,7 @@ namespace Slutprojekt
                         }
                         else if (upgift == "b3")
                         {
-                            exemplet = gEllerEj2 * 22;
+                            exemplet = gEllerEj2 * 22.8;
                         }
                         else if (upgift == "c1")
                         {
@@ -133,7 +197,7 @@ namespace Slutprojekt
                         }
                         else if (upgift == "c2")
                         {
-                            exemplet = gEllerEj2 -1 * gEllerEj2;
+                            exemplet = (gEllerEj2 - 1) * gEllerEj2;
                         }
                         else if (upgift == "c3")
                         {
@@ -163,7 +227,7 @@ namespace Slutprojekt
                         {
                             exemplet = (gEllerEj2 * 999998999999999999) / (gEllerEj2 * 2);
                         }
-                        Console.WriteLine(exemplet);
+                        Console.WriteLine(exemplet); ///Svaret. Jag knske borde skriva ut det sista snesträcket som slach men man brukar skriva med snesträck och det var bara en gissning på hur man egentligen stavar det.
                     }
                 }
             }
