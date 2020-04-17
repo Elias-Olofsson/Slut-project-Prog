@@ -2,19 +2,19 @@
 using System.Diagnostics.SymbolStore;
 using System.Security.Cryptography;
 
-namespace Slutprojekt
+namespace Slutprojekt //Det här och över skrev inte jag.
 {
     class Program
     {
         static void Main(string[] args)
         {
             App app = new App();
-            app.Start();
+            app.Start(); //Den här gör så att App startar så att programmet inte slutar här.
         }
     }
-    class App
+    class App 
     {
-        public string svar = "Inte valt ännu.";
+        public string svar = "Inte valt ännu."; //Detta värdet är gjort för att bytas senare.
         Formel a1 = new Formel();
         Formel a2 = new Formel();
         Formel a3 = new Formel();
@@ -29,10 +29,10 @@ namespace Slutprojekt
         Formel d3 = new Formel();
         Formel e1 = new Formel();
         Formel e2 = new Formel();
-        Formel e3 = new Formel(); //Dessa är kanske lite svårare och onödiga men jag motivrar det med att jag vill ha properties som jag egentligen inte behöver men det står att jag ska ha det och det ser lite mer tydligt ut att de är formler.
+        Formel e3 = new Formel(); 
         public void Start() //Denna är public men den gör så att Input som är private körs.
         {
-            a1.Namn = "a1";
+            a1.Namn = "a1"; //Namn kanske är onödiga men kanske hjälper mig längre fram t.ex om jag vill byta namn.
             a1.Formeln = "x*2";
 
             a2.Namn = "a2";
@@ -91,58 +91,74 @@ namespace Slutprojekt
                 string upgift = Console.ReadLine();
                 switch (upgift) //Elias sa att det var så man gjorde det och det ser mindre ut så därför gjorde jag det.
                 {
-                    case "a1":
+                    case "a1": //Så det är lite som en if sats case är som if eller else if. Altså kollar den här om användaren skrivit a1.
                         svar = a1.Formeln;
+                        Console.WriteLine("Du har valt:" + a1.Namn);
                         break;
                     case "a2":
                         svar = a2.Formeln;
+                        Console.WriteLine("Du har valt:" + a2.Namn);
                         break;
                     case "a3":
                         svar = a3.Formeln;
+                        Console.WriteLine("Du har valt:" + a3.Namn);
                         break;
                     case "b1":
                         svar = b1.Formeln;
+                        Console.WriteLine("Du har valt:" + b1.Namn);
                         break;
                     case "b2":
                         svar = b2.Formeln;
+                        Console.WriteLine("Du har valt:" + b2.Namn);
                         break;
                     case "b3":
                         svar = b3.Formeln;
+                        Console.WriteLine("Du har valt:" + b3.Namn);
                         break;
                     case "c1":
                         svar = c1.Formeln;
+                        Console.WriteLine("Du har valt:" + c1.Namn);
                         break;
                     case "c2":
                         svar = c2.Formeln;
+                        Console.WriteLine("Du har valt:" + c2.Namn);
                         break;
                     case "c3":
                         svar = c3.Formeln;
+                        Console.WriteLine("Du har valt:" + c3.Namn);
                         break;
                     case "d1":
                         svar = d1.Formeln;
+                        Console.WriteLine("Du har valt:" + d1.Namn);
                         break;
                     case "d2":
                         svar = d2.Formeln;
+                        Console.WriteLine("Du har valt:" + d2.Namn);
                         break;
                     case "d3":
                         svar = d3.Formeln;
+                        Console.WriteLine("Du har valt:" + d3.Namn);
                         break;
                     case "e1":
                         svar = e1.Formeln;
+                        Console.WriteLine("Du har valt:" + e1.Namn);
                         break;
                     case "e2":
                         svar = e2.Formeln;
+                        Console.WriteLine("Du har valt:" + e2.Namn);
                         break;
                     case "e3":
                         svar = e3.Formeln;
+                        Console.WriteLine("Du har valt:" + e3.Namn);
                         break;
                     default:
                         inteKorrekt = true;
                         break;
                 }
-                Console.WriteLine("Nu får du börja skriva in tal eller gissningar! \nVill du testa ett tal och se vad det blir skriver du in talet. Vill du gissa så skriver du g."); 
+                Console.WriteLine("Nu får du börja skriva in tal eller gissningar! \nVill du testa ett tal och se vad det blir skriver du in talet. Vill du gissa så skriver du g.");
                 //Här förklaras fortsättningen för användaren.
-                bool svaratRätt = false;
+                int antalFel = 0;
+                bool svaratRätt = false; //Denna gör så att användaren kan trycka på en knapp för att stänga av programmet när den gissat rätt.
                 while (svaratRätt == false)
                 {
                     string gEllerEj = Console.ReadLine();
@@ -153,23 +169,25 @@ namespace Slutprojekt
                         if (Console.ReadLine() == svar)
                         {
                             Console.WriteLine("Du har rätt.");
+                            Console.WriteLine("Du har gjort " + antalFel + " fel.");
                             svaratRätt = true;
                         }
                         else
                         {
                             Console.WriteLine("Du har fel.");
+                            antalFel++;
                         }
                     }
                     else if (gEllerEj != "g")
                     {
-                        gEllerEj = gEllerEj.Replace(".", ",");
+                        gEllerEj = gEllerEj.Replace(".", ","); //Gör så att man inte får fel för att man använder fel tecken.
                         double gEllerEj2;
                         if (!double.TryParse(gEllerEj, out gEllerEj2)) //GEllerEj2 är som vanliga gEllerEj men den har blivit en double.
                             continue;
-                        double exemplet = 1.0;
+                        double exemplet = 1.0; //Detta värdet är gjort för att bytas senare.
                         if(upgift == "a1")
                         {
-                            exemplet = gEllerEj2 * 2;
+                            exemplet = gEllerEj2 * 2; //Här är var datorn räknar ut vad talet blir om man skrivit a1.
                         }
                         else if(upgift == "a2")
                         {
