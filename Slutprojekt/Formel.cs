@@ -9,7 +9,7 @@ namespace Slutprojekt //Det här och över skrev inte jag.
         private string namn; //Här är properties.
         private string formeln;
 
-        public string Namn { get {return namn; } set {namn = value; } } //Dessa gör så att man kan använda propertiesarna på andra sidan.
+        public string Namn { get {return namn; } set {namn = value; } } //Dessa gör så att man kan använda propertiesarna på andra sidan i App.
         public string Formeln { get { return formeln; } set { formeln = value; } }
     }
 }
