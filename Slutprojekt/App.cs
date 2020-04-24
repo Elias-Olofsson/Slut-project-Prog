@@ -23,7 +23,7 @@ namespace Slutprojekt //Det här och över skrev inte jag.
         private Formel e2 = new Formel();
         private Formel e3 = new Formel();
 
-        public void Start() //Denna är public men den gör så att Input som är private körs.
+        public void Start() //Denna är public men den gör så att Input som är private körs istället för att göra Input till public så är denna public för någon måste vara public då main inte når App annars.
         {
             SkapaSvar(); //Så här gör den så att SkapaSvar anropas.
 
@@ -83,7 +83,7 @@ namespace Slutprojekt //Det här och över skrev inte jag.
             e2.Formeln = "(((x/3))*(x/2))*(x-3.4)";
 
             e3.Namn = "e3";
-            e3.Formeln = "((x*999998999999999999))/(x*2)";
+            e3.Formeln = "((x*999998999))/(x*2)";
         }
 
         private void Input()
@@ -166,9 +166,9 @@ namespace Slutprojekt //Det här och över skrev inte jag.
                 {
                     Console.WriteLine("Nu får du börja skriva in tal eller gissningar! \nVill du testa ett tal och se vad det blir skriver du in talet. Vill du gissa så skriver du g har du redan gissat och vill gissa igen skriv in G.");
                     //Här förklaras fortsättningen för användaren.
-                    int antalFel = 0;
+                    int antalFel = 0; //antalFel är antalet fel och därför heter den så.
                     bool svaratRätt = false; //Denna gör så att användaren kan trycka på en knapp för att stänga av programmet när den gissat rätt.
-                    while (svaratRätt == false)
+                    while (svaratRätt == false) //Så jag valde While för att den är kortare och mer flexibel om man vill att den ska kunna vara alternativ än do while och funkar lika bra i det här tillfället om det inte är så att man snabbt vill veta om den kör första gången då den är marginellt sämre.
                     {
                         string gEllerEj = Console.ReadLine(); //gEllerEj heter så för att den kommer kollas om den är g.
                         if (gEllerEj == "g" || gEllerEj == "G")
@@ -195,7 +195,7 @@ namespace Slutprojekt //Det här och över skrev inte jag.
                         {
                             gEllerEj = gEllerEj.Replace(".", ","); //Gör så att man inte får fel för att man använder fel tecken.
                             double gEllerEj2;
-                            if (!double.TryParse(gEllerEj, out gEllerEj2)) //GEllerEj2 är som vanliga gEllerEj men den har blivit en double.
+                            if (!double.TryParse(gEllerEj, out gEllerEj2)) //GEllerEj2 är som vanliga gEllerEj men den har blivit en double men eftersom den är samma så heter den också gEllerEj. If gör så att den bara ändrar om det går.
                                 continue;
                             double exemplet = 1.0; //Detta värdet är gjort för att bytas senare.
                             if (upgift == "a1")
@@ -256,7 +256,7 @@ namespace Slutprojekt //Det här och över skrev inte jag.
                             }
                             else if (upgift == "e3")
                             {
-                                exemplet = (gEllerEj2 * 999998999999999999) / (gEllerEj2 * 2);
+                                exemplet = ((gEllerEj2 * 999998999)) / (gEllerEj2 * 2); //Funkar fortfarnade inte.
                             }
                             Console.WriteLine(exemplet); ///Svaret. Jag knske borde skriva ut det sista snesträcket som slach men man brukar skriva med snesträck och det var bara en gissning på hur man egentligen stavar det.
                         }
