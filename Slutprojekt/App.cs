@@ -27,15 +27,16 @@ namespace Slutprojekt //Det här och över skrev inte jag.
         {
             SkapaSvar(); //Så här gör den så att SkapaSvar anropas.
 
-            do
+            do //do gör så att den körs minst en gång.
             {
-                Input();
+                Input(); //Här körs input.
 
                 Console.WriteLine("Vill du spela igen? (ja/nej)");
 
-            } while (Console.ReadLine() == "ja");
+            } while (Console.ReadLine() == "ja"); //Denna gör så att programmet körs igen men inte direkt från början om användaren vill köra igen så att användaren är kvar och inte behöver trycka på någon knapp mer.
 
             Console.WriteLine("Hej då!");
+            Console.WriteLine("Tryck var du vill för att avsluta."); //Detta står på engelska men rästen är på svenska så därför översätter jag.
         }
 
         private void SkapaSvar() //Denna gör så att valet av formeln sätter svaret man ska gissa senare.
@@ -59,16 +60,16 @@ namespace Slutprojekt //Det här och över skrev inte jag.
             b3.Formeln = "x*22.8";
 
             c1.Namn = "c1";
-            c1.Formeln = "(x*x)*2";
+            c1.Formeln = "x*x*2";
 
             c2.Namn = "c2";
             c2.Formeln = "(x-1)*x";
 
             c3.Namn = "c3";
-            c3.Formeln = "x*(-1.63)";
+            c3.Formeln = "x*-1.63";
 
             d1.Namn = "d1";
-            d1.Formeln = "((x*x)+x)+3";
+            d1.Formeln = "(x*x)+x+3";
 
             d2.Namn = "d2";
             d2.Formeln = "(x*3.4)+4.3";
@@ -77,18 +78,18 @@ namespace Slutprojekt //Det här och över skrev inte jag.
             d3.Formeln = "(x-3.4)*x";
 
             e1.Namn = "e1";
-            e1.Formeln = "((x*0.4))+(x-3.4)";
+            e1.Formeln = "(x*2.4)+(x-3.4)";
 
             e2.Namn = "e2";
-            e2.Formeln = "(((x/3))*(x/2))*(x-3.4)";
+            e2.Formeln = "(x/3)*(x-3)*-x";
 
             e3.Namn = "e3";
-            e3.Formeln = "((x*999998999))/(x*2)";
+            e3.Formeln = "(x*998999)+(x*2)";
         }
 
         private void Input()
         {
-            bool inteKorrekt = true; //inteKorrekt ser till så att man inte kommer vidare utan att ha gjort rätt.
+            bool inteKorrekt = true; //inteKorrekt ser till så att man inte kommer vidare utan att ha gjort rätt. Det är därför den heter inteKorrekt
             Console.WriteLine("Hej och välkommen till Vad gör programmet med talet?! \nDu får börja att välja en formel och det gör du genom att skriva en bokstav först mellan a och e och ett tal sedan mellan 1 och 3. \nBokstaven är svårighetsgraden där a är lättast och siffran är vilket av talen. Skriv alltid med bara små bokstäver och gör inga mellanrum.\nTryck enter efter varje inmatning och kom ihåg: de högre svårighetsgraderna är riktigt irriterande.");
             //Här förklaras början för användaren.
             while (inteKorrekt) //While funkar oftare än if så det är för säkerhets skull om jag skulle ändra senare.
@@ -158,7 +159,7 @@ namespace Slutprojekt //Det här och över skrev inte jag.
                         svar = e3.Formeln;
                         Console.WriteLine("Du har valt:" + e3.Namn);
                         break;
-                    default:
+                    default: //Om inte man skrivit något över händer detta.
                         inteKorrekt = true; 
                         break;
                 }
@@ -236,7 +237,7 @@ namespace Slutprojekt //Det här och över skrev inte jag.
                             }
                             else if (upgift == "d1")
                             {
-                                exemplet = ((gEllerEj2 - 1) * (gEllerEj2 - 1) * (gEllerEj2 - 1)) + gEllerEj2;
+                                exemplet = ((gEllerEj2 * gEllerEj2) + gEllerEj2) + 3;
                             }
                             else if (upgift == "d2")
                             {
@@ -252,11 +253,11 @@ namespace Slutprojekt //Det här och över skrev inte jag.
                             }
                             else if (upgift == "e2")
                             {
-                                exemplet = (((gEllerEj2 / 3)) * (gEllerEj2 / 2)) * (gEllerEj2 - 3.4);
+                                exemplet = (((gEllerEj2 / 3)) * (gEllerEj2 - 3)) * (-gEllerEj2);
                             }
                             else if (upgift == "e3")
                             {
-                                exemplet = ((gEllerEj2 * 999998999)) / (gEllerEj2 * 2); //Funkar fortfarnade inte.
+                                exemplet = ((gEllerEj2 * 998999)) + (gEllerEj2 * 2); //Funkar fortfarnade inte.
                             }
                             Console.WriteLine(exemplet); ///Svaret. Jag knske borde skriva ut det sista snesträcket som slach men man brukar skriva med snesträck och det var bara en gissning på hur man egentligen stavar det.
                         }
